@@ -11,7 +11,7 @@ import java.sql.Date;
 @Entity
 @Table(name = "students",
         uniqueConstraints = @UniqueConstraint(
-                columnNames = {"e-mail", "user_name"},
+                columnNames = {"email", "user_name"},
                 name = "uniqueEmailUserName"
         )
 )
@@ -23,6 +23,7 @@ public class Student {
 
     @Id
     @SequenceGenerator(name = "st_sequence", sequenceName = "st_sequence", allocationSize = 1)
+    //more on check out --> https://www.baeldung.com/jpa-strategies-when-set-primary-key
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator = "st_sequence")
     //@Column(name = "st_id", nullable = false)
     private Long studentId;
@@ -31,21 +32,38 @@ public class Student {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
-    @Column(name = "e_mail")
+    @Column(name = "email", nullable = false)
     private String eMail;
     @Column(name = "phone_number")
     private String phoneNumber;
     @Column(name = "date_of_birth")
     private Date dateOfBirth;
-    @Column(name = "user_name")
+    @Column(name = "user_name", nullable = false)
     private String userName;
     @Column(name = "password")
     private String password;
 
-    private String guardian;
+    @Embedded
+    private Address address;
+/*
+    private String street;
+    private String city;
+    private String state;
+    private String country;
+    private String postalCode;
+
+ */
+    @Embedded
+    private Guardian guardian;
+    /*
+    private String guardianFirstName;
+    private String guardianlastName;
     private String guardianEmail;
     private String guardianPhoneNumber;
-    //private Address address;
-    //private Guardian guardian;
+
+     */
+
+
+
 
 }
