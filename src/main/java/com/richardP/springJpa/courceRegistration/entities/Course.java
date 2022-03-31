@@ -27,4 +27,19 @@ public class Course {
     private Long courseId;
     private String courseName;
     private Integer credit;
+
+    @OneToOne(
+            mappedBy = "course"
+    )
+    private CourseMaterial courseMaterial;
+
+    @ManyToOne(
+            cascade = CascadeType.ALL
+    )
+
+    @JoinColumn(
+            name = "teacher_id",
+            referencedColumnName = "teacherid"
+    )
+    private Teacher teacher;
 }

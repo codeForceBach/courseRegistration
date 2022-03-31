@@ -24,7 +24,7 @@ class CourseMaterialRepositoryTest {
                 .build();
 
         CourseMaterial courseMaterial = CourseMaterial.builder()
-                .url("http://localhost:8082/courseMaterial")
+                .url("http://localhost:8082/springboot/201")
                 .course(testCourse)
                 .build();
 

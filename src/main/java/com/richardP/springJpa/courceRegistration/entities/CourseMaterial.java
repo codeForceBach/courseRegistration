@@ -23,11 +23,14 @@ public class CourseMaterial {
             generator = "course_material_sequence"
     )
     private Long courseMaterialId;
+    private Long courseNumber;
+    private String textBook;
     private String url;
 
     @OneToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.LAZY,
+            optional = false
     )
     @JoinColumn(
             name = "course_id",

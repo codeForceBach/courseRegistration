@@ -23,4 +23,20 @@ utilzed @Embedable( for seperate entity) and @Embedded (entity that is belong to
 https://www.baeldung.com/jpa-cascade-types
 
 (01:30:08) Fetch Types
+https://www.baeldung.com/hibernate-lazy-eager-loading
 fetchType.lazy - unless specify to bring cascade entity from database it would excludes the other entity that has relationship. 
+
+(01:33:01) Uni & Bi directional relationship
+when fetching an entity(course) we also want to fetch other entity that has a relationship (such as courseMaterial) as well.
+to achive that set bi directional relationship to the entity(course) since only courseMaterial defined relationship with course.
+instanciate courseMaterial instance in course class,
+set @OneToOne with mappedby = [course]
+
+(01:37:24) JPA One-To-Many Relationship
+add teacher entity to explain one(teacher) to many(course) relationship.
+in teacher entity, establishes @OneToMany relationship with course by 
+adding @JoinColumn links between teacher and course by teacher_id and references the teacherId
+
+(01:50:08) JPA Many-To-One Relationship
+redefined relationship from Teacher with @OneToMany to Course 
+instead establish @ManyToOne relationship from Course to Teacher
