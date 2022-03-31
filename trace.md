@@ -21,3 +21,6 @@ utilzed @Embedable( for seperate entity) and @Embedded (entity that is belong to
 
 (01:27:58) Cascade Types
 https://www.baeldung.com/jpa-cascade-types
+
+(01:30:08) Fetch Types
+fetchType.lazy - unless specify to bring cascade entity from database it would excludes the other entity that has relationship. 
