@@ -15,7 +15,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-//@DataJpaTest
+//@DataJpaTest //-- data will be flushed out after test
 class StudentRepositoryTest {
 
     @Autowired

@@ -15,4 +15,9 @@ https://www.baeldung.com/jpa-join-column
 test basic Repository & student( error with @Data NullPointException)
 
 (38:51) @Embeddable and @Embedded
-@Embedable( for seperate entity) and @Embedded (entity that is belong to another entity) utilzed in order to store a seperate entity in a single database table for a class, instead of creating seperate table 
+utilzed @Embedable( for seperate entity) and @Embedded (entity that is belong to another entity)  in order to store a seperate entity in a single database table, instead of creating seperate table 
+@AttributeOverrides
+
+
+(01:27:58) Cascade Types
+https://www.baeldung.com/jpa-cascade-types

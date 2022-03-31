@@ -25,7 +25,7 @@ public class Student {
     @SequenceGenerator(name = "st_sequence", sequenceName = "st_sequence", allocationSize = 1)
     //more on check out --> https://www.baeldung.com/jpa-strategies-when-set-primary-key
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator = "st_sequence")
-    //@Column(name = "st_id", nullable = false)
+    //@Column(name = "student_id", nullable = false)
     private Long studentId;
 
     @Column(name = "first_name")
