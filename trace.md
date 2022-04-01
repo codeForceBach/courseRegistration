@@ -51,3 +51,7 @@ find reference that explain the cause but not able to fix it.
 https://www.baeldung.com/hibernate-initialize-proxy-exception
 Otherwise the new @ManyToMany works.
 
+Moving forward
+complete all the repository and service layer with complete code and test classes to validate all the method.
+expend with front-End React application to make full featured application.
+
