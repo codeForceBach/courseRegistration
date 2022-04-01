@@ -6,6 +6,8 @@ import com.richardP.springJpa.courceRegistration.entities.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 import javax.persistence.AttributeOverride;
 
@@ -51,6 +53,41 @@ class CourseRepositoryTest {
                 .build();
 
         courseRepository.save(testCourse);
+
+    }//end saveCourseWithTeacherTest
+
+    @Test
+    public void findAllPageNationCourseTest(){
+
+        Pageable firstPageWithThreeRecord = PageRequest.of(0, 3);
+        Pageable secondPageWithTwoRecord = PageRequest.of(1, 2);
+
+        List<Course> courses = courseRepository
+                .findAll(firstPageWithThreeRecord)
+                .getContent();
+        Long totalElement = courseRepository.findAll( firstPageWithThreeRecord)
+                .getTotalElements();
+
+        int totalPage = courseRepository.findAll( firstPageWithThreeRecord)
+                .getTotalPages();
+
+        System.out.println("First Page Course : " + courses);
+        System.out.println("first course total element : " + totalElement);
+        System.out.println("First Course total page: " + totalPage);
+
+
+        List<Course> courses2 = courseRepository
+                .findAll(secondPageWithTwoRecord)
+                .getContent();
+        Long totalElement2 = courseRepository.findAll(secondPageWithTwoRecord)
+                .getTotalElements();
+
+        int totalPage2 = courseRepository.findAll(secondPageWithTwoRecord)
+                .getTotalPages();
+
+        System.out.println("Second Page Course : " + courses2);
+        System.out.println("Second course total element : " + totalElement2);
+        System.out.println("Second Course total page: " + totalPage2);
 
     }
 

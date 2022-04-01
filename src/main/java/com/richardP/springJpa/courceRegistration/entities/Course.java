@@ -36,7 +36,6 @@ public class Course {
     @ManyToOne(
             cascade = CascadeType.ALL
     )
-
     @JoinColumn(
             name = "teacher_id",
             referencedColumnName = "teacherid"

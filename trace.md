@@ -40,3 +40,6 @@ adding @JoinColumn links between teacher and course by teacher_id and references
 (01:50:08) JPA Many-To-One Relationship
 redefined relationship from Teacher with @OneToMany to Course 
 instead establish @ManyToOne relationship from Course to Teacher
+https://thorben-janssen.com/best-practices-many-one-one-many-associations-mappings/
+https://www.coderscampus.com/hibernate-manytoone-unidirectional-tutorial/
+
