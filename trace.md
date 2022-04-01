@@ -43,3 +43,11 @@ instead establish @ManyToOne relationship from Course to Teacher
 https://thorben-janssen.com/best-practices-many-one-one-many-associations-mappings/
 https://www.coderscampus.com/hibernate-manytoone-unidirectional-tutorial/
 
+
+(02:07:05) JPA Many-To-Many Relationship
+ran into error for findAllPageNationCourseTest()
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.richardP.springJpa.courceRegistration.entities.Course.students, could not initialize proxy - no Session
+find reference that explain the cause but not able to fix it.
+https://www.baeldung.com/hibernate-initialize-proxy-exception
+Otherwise the new @ManyToMany works.
+
